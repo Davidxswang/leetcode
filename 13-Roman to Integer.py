@@ -46,6 +46,7 @@ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
 # we can process it digit by digit, translate every digit to an integer and put them in the list, then sum them up
 # if we see s[i]==s[i-1], increment the last element in the list, if we see s[i]<s[i-1], append another element to it
 # if we see s[i]>s[i-1], we need to do some trick things to the last element of the list
+# time complexity: O(n), space complexity: O(n)
 class Solution:
     def romanToInt(self, s: str) -> int:
         result = []
@@ -69,3 +70,30 @@ class Solution:
                 else:
                     result[-1] = -1*result[-1] + dic[s[i]]
         return sum(result)
+
+# to save some space, we can use a int to save the result directly, and get rid of the intermediate list
+# time complexity: O(n), space complexity: O(1)
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        dic = {
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000
+        }
+        total = 0
+        i = 0
+        while i < len(s):
+            if i == len(s)-1:
+                total += dic[s[i]]
+                break
+            if dic[s[i]] >= dic[s[i+1]]:
+                total += dic[s[i]]
+                i += 1
+            else:
+                total += dic[s[i+1]] - dic[s[i]]
+                i += 2
+        return total
