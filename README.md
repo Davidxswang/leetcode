@@ -3,5 +3,10 @@ I decided to walk through the LeetCode problems 5/day, and publish some of the s
 
 # Some very interesting problems
 ## 28 Implement strStr()
-KMP pattern search algorithm use a O(m+n) time complexity to search a substring in a string, which is really incredible.
- 
+KMP pattern search algorithm use a O(m+n) time complexity to search a substring in a string, which is really incredible. The key actually is to make use of the information embedded in the pattern string.
+
+## 53 Maximum Subarray()
+### Divide and Conquer
+Every time, it divides the array into two parts, calculates the maximum subarray in each part(left and right), and the array that is across the middle element. Max(left sum, right sum, the sum across the middle element) is the result of that level.
+### Dynamic Programming
+Kadane's algorithm uses the assumption that whenever I evaluate a new element nums[i] and check if I should connect it to a already-found subarray previously to make a contiguous subarray, the previous part should not lower the current value nums[i]. Otherwise I should start from nums[i] + 0 instead of nums[i] + Negative Value.
