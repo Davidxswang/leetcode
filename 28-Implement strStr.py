@@ -49,6 +49,7 @@ class Solution:
 #       if this is the first element of needle that is comparing with the element in haystack, haystack pointer ++
 #       if this is not the first element of needle that is comparing with the element in haystack, look up the partial match list
 #          e.g. the partial match list of last element(which is the last matching element) indicates 2, then haystack pointer stay where it is, but needle pointer moves to 2, to compare needle[2] with haystack[i]
+# I think the best way to think about this is to think about the partial match list generating process using "ababa" and "ababc"
 # time complexity: O(m+n), space complexity: O(n), where m and n are the # of elements in haystack and needle
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
