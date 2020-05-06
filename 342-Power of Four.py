@@ -13,7 +13,8 @@ Output: false
 Follow up: Could you solve it without loops/recursion?
 """
 
-# Inspired by @h285zhao in the discussion panel
+# Inspired by @h285zhao in the discussion panel. If the number is a power of 4, then it in binary format should look like:
+# 100 00000000000(number of 0 after 100 should be even).
 # time complexity: O(logn) for the base conversion, space complexity: O(n)
 class Solution:
     def isPowerOfFour(self, num: int) -> bool:
