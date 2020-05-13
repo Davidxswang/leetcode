@@ -19,6 +19,13 @@ Given a binary tree, find the number of paths that sum to a given value. The pat
 
 I have to say this is a genious solution, and this problem should be rated as medium instead of easy.
 
-The solution's link is: https://leetcode.com/problems/path-sum-iii/discuss/141424/Python-step-by-step-walk-through.-Easy-to-understand.-Two-solutions-comparison.-%3A-)
+The solution's link is: https://leetcode.com/problems/path-sum-iii/discuss/141424/Python-step-by-step-walk-through.-Easy-to-understand.-Two-solutions-comparison.-%3A
+
+## 121 Best Time to Buy and Sell Stock
+Actually this is a dynamic programming problem. We can only sell and buy at most once on the market. This is very similar to the **53 Maximum Subarray** question.
+
+- If the current CHANGE makes me earn money(current balance > 0), I should embrace the change. -> compare this with maxprofit.
+
+- If the current CHANGE makes me lose money(current balance < 0), I should start over. -> reset the current balance = 0.
 
 ## 
