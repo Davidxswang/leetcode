@@ -28,4 +28,15 @@ Actually this is a dynamic programming problem. We can only sell and buy at most
 
 - If the current CHANGE makes me lose money(current balance < 0), I should start over. -> reset the current balance = 0.
 
+## 160 Intersection of Tow Linked Lists
+I found the genious solution from the discussion area, by @icrtiou. The link is here: https://leetcode.com/problems/intersection-of-two-linked-lists/discuss/49798/Concise-python-code-with-comments
+
+Basically this is make two lists connected, one is A+B, the other is B+A. These two will have the same length. Use two pointers to go from the beginning of each connected list and see if these two pointers will be the same.
+
+There are two cases that these two pointers will be the same:
+- when they are both None, which will be at the end. This means they don't share any common element.
+- when they have some common element and they are both pointing to that element at the same time.
+
+This is a very brilliant idea.
+
 ## 
