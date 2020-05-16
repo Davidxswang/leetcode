@@ -89,4 +89,15 @@ To calculate the number of 5 in n!, we need to calculate there are how many numb
     
     Therefore, we need to calculate iteratively.
 
+## 198 House Robber
+It's a dynamic programming problem. The core idea is that the current maximum profit is whether:
+
+- from robbing current house + the maximum profit in house current-2 house, or,
+
+- from not robbing current house, i.e. the maximum profit in the current house == the maximum profit in the current-1 house,
+
+whichever is larger should be the maximum profit in the current house.
+
+This is inspired by @heroes3001 in the discussion area. https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems.
+
 ## 
