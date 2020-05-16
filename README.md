@@ -50,4 +50,23 @@ To rotate, is to put the last few digits in the front. This can be thought as:
     
     3. At last, reverse the last few digits that are supposed to move from the front to the back.
 
-## 
+## 204 Count Primes
+I didn't think out the solution. Thanks to @tusizi in the discussion area. https://leetcode.com/problems/count-primes/discuss/57595/Fast-Python-Solution
+The algorithm is the idea of excluding all the numbers that are not prime. I have to say this is very brilliant.
+
+    Step 1, set all the numbers (starting from 2) to prime; 
+    
+    Step 2, iterate all the numbers, if the number you are inspecting, let's say X, is a prime (by default, it should be a prime unless it has been set not a prime in the previous iteration), set all the numbers that has a factor of X, to "not a prime".
+
+For example, n = 10. 
+
+    If n = 10, the boolean list will be: 
+    [False, False, True, True, True, True, True, True, True, True] before the iteration.
+    
+    After looping on i = 2, the boolean list will be:
+    [False, False, True, True, False, True, False, True, False, True].
+
+    After looping on i = 3, the boolean list will be:
+    [False, False, True, True, False, True, False, True, False, False].
+
+So the answer for n = 10 is 4.
