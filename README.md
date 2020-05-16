@@ -70,3 +70,23 @@ For example, n = 10.
     [False, False, True, True, False, True, False, True, False, False].
 
 So the answer for n = 10 is 4.
+
+## 172 Factorial Trailing Zeroes
+Thanks to @xcv58 in the discussion area. https://leetcode.com/problems/factorial-trailing-zeroes/discuss/52371/My-one-line-solutions-in-3-languages
+
+The trailing zeros depend on the number of 5 in n! because there are way more 2s than 5s in n!.
+
+To calculate the number of 5 in n!, we need to calculate there are how many numbers in n! containing:
+    
+    5, like: 5, 10, 15, 20, 25, 30, 35...
+    25, like 25, 50
+    125, like 125, 250
+    ...
+
+    Take a close look, we can see if the number is like 5, 10, 15, 20, 55, 65, even though they are greater than 5, they only contain one 5
+    
+    But for numbers like 25, 50, they contain two 5s, i.e. they have 25 in them.
+    
+    Therefore, we need to calculate iteratively.
+
+## 
