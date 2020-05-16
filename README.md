@@ -39,4 +39,15 @@ There are two cases that these two pointers will be the same:
 
 This is a very brilliant idea.
 
+## 189 Rotate Array.
+Thanks to @danny6514 in the discussion area. https://leetcode.com/problems/rotate-array/discuss/54250/Easy-to-read-Java-solution This is genious, but very easy to interpret.
+
+To rotate, is to put the last few digits in the front. This can be thought as: 
+    
+    1. Reverse the whole list first so that the few digits are in the front, but all the digits are in the wrong order.
+    
+    2. Then, reverse the first few digits that are supposed to move from the back to the front.
+    
+    3. At last, reverse the last few digits that are supposed to move from the front to the back.
+
 ## 
