@@ -100,4 +100,15 @@ whichever is larger should be the maximum profit in the current house.
 
 This is inspired by @heroes3001 in the discussion area. https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems.
 
+## 234 Palindrome Linked List
+This is inspired by @yavinci in the discussion area. https://leetcode.com/problems/palindrome-linked-list/discuss/64501/Java-easy-to-understand
+
+Use slow and fast pointer to find the middle+1 element. If 6, it's 4, if 5, it's 4.
+
+Then reverse the second half, e.g. if 6, reverse 4-6, if 5, reverse 4-5.
+
+Compare the element one by one on the first and second half.
+
+It's not hard at all, just need to be careful with all the details.
+
 ## 
