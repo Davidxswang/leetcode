@@ -125,4 +125,15 @@ Time complexity: O(nm) where n and m are the numbers of elements in tree s and t
 
 Space complexity: O(depth of s) if recursion is considered.
 
+## 581 Shortest Unsorted Continuous Subarray
+Three traverses to find the answer. Thanks to the solution provided in the solution.
+
+    - The first traverse is to find the the beginning and end of a reverse pair. A reverse pair is two nums such that nums[i] > nums[i+1].
+
+    - The second traverse is to find the min and max of the nums in nums[start] to nums[end]
+
+    - The third traverse is to find where the locations that min and max should be put if we were going to sort the array. Note in the 3rd traverse that we should find the element that nums[i] > min for start and nums[i] < max for end. Equality is excluded in both situations because first is the violation of the <= rule and second is to find the shortest subarray.
+
+Time complexity: O(n), space complexity: O(1)
+
 ## 
