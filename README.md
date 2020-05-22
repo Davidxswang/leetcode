@@ -111,4 +111,11 @@ Compare the element one by one on the first and second half.
 
 It's not hard at all, just need to be careful with all the details.
 
+## 543 Diameter of Binary Tree
+Thanks for the solution provided by the problem. 
+
+The main idea is to traverse all the node, and see if left+right+1 is larger than current max. If it's larger, update the global variable. After finish dfs of this node or this subtree, return max(left,right)+1.
+
+Here is the solution: https://leetcode.com/problems/diameter-of-binary-tree/solution/
+
 ## 
