@@ -136,4 +136,7 @@ Three traverses to find the answer. Thanks to the solution provided in the solut
 
 Time complexity: O(n), space complexity: O(1)
 
-## 
+## 605 Can Place Flowers
+Dynamic programming problem. Greedily search the available spot and put the plant there see how many we can place in the list.
+
+Thanks to the solution provided by @awice and @PhilF in the discussion area. https://leetcode.com/problems/can-place-flowers/discuss/103890/Python-Straightforward-with-Explanation
