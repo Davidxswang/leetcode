@@ -118,4 +118,11 @@ The main idea is to traverse all the node, and see if left+right+1 is larger tha
 
 Here is the solution: https://leetcode.com/problems/diameter-of-binary-tree/solution/
 
+## 572 Subtree of Another Tree
+The key idea is to traverse very node in the tree, and treat each node as a root of tree A to see if tree A is equal to t. Thanks to the solution: https://leetcode.com/problems/subtree-of-another-tree/solution/
+
+Time complexity: O(nm) where n and m are the numbers of elements in tree s and t.
+
+Space complexity: O(depth of s) if recursion is considered.
+
 ## 
