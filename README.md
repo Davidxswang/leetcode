@@ -140,3 +140,18 @@ Time complexity: O(n), space complexity: O(1)
 Dynamic programming problem. Greedily search the available spot and put the plant there see how many we can place in the list.
 
 Thanks to the solution provided by @awice and @PhilF in the discussion area. https://leetcode.com/problems/can-place-flowers/discuss/103890/Python-Straightforward-with-Explanation
+
+## Maximum Product of Three Numbers
+This is not a hard question, just need to think thoroughly. Given a sequence, the maximum product of three numbers happens either in following three cases:
+    
+    1. maximum < 0. In this case, we should find the maximal 3 numbers to make the product maximum.
+    
+    2. maximum = 0. In this case, we can find 0 and another 2 negative numbers to make the product = 0, which is largest.
+    
+    3. maximum > 0. In this case, we can find the maximum by max[0]*max[1]*max[2] or max*min[0]*min[1] whichever is larger.
+    
+So combining them all together, we can get: max = max(max[0]*max[1]*max[2], max*min[0]*min[1]).
+
+Thanks to the solution provided by the questions. https://leetcode.com/problems/maximum-product-of-three-numbers/solution/
+
+## 
