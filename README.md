@@ -154,4 +154,17 @@ So combining them all together, we can get: max = max(max[0]*max[1]*max[2], max*
 
 Thanks to the solution provided by the questions. https://leetcode.com/problems/maximum-product-of-three-numbers/solution/
 
+## 653 Two Sum IV
+To save the extra space (space due to call stack omitted), I used two iterators to traverse the tree, one from left to right, the other from right to left, therefore two pointers are going toward each other.
+
+- If two pointers (from two iterators) meet but still could not find a match, search fails. 
+
+- If two pointers have not meet but have the same node values not summed up to k, search fails, because when traversing inorderly, the same elements are contiguous.
+
+- If two pointers summed up are too small, move the left pointer toward right a step further. 
+
+- If two pointers summed up are too large, move the right pointer toward left a step further.
+
+Hope you find this solution interesting. I also posted this solution here, check it out: https://leetcode.com/problems/two-sum-iv-input-is-a-bst/discuss/647955/Python-Solution-Time-O(n)-Space-O(1)-using-Iterator-Yield
+
 ## 
