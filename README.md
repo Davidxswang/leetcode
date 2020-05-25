@@ -168,4 +168,19 @@ To save the extra space (space due to call stack omitted), I used two iterators 
 
 Hope you find this solution interesting. I also posted this solution here, [check it out.](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/discuss/647955/Python-Solution-Time-O(n)-Space-O(1)-using-Iterator-Yield)
 
+## Second Minimum Node In a Binary Tree
+Thanks for the solution provided by the problem. The basic idea is
+
+- The global minimum is root.val for sure.
+
+- If we find another one larger than minimum, it's the potential answer.
+
+- If we find a node that is equal to or larger than the potential answer, than we don't need to check the left and right substree of this node, because this node is the smallest of that subtree.
+
+- If we find a node that is smaller than the potential answer (surely larger than the global min), we need to replace the potential answer by this number and we don't need to check its left and right subtrees. Reason same as above.
+
+- If we find a node that is equal to the global minimum, we need to traverse its left and right subtrees because we might find better potential answer in the subtrees.
+
+Time complexity: O(n), space complexity: O(1)
+
 ## 
