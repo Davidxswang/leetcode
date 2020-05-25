@@ -183,4 +183,10 @@ Thanks for the solution provided by the problem. The basic idea is
 
 Time complexity: O(n), space complexity: O(1)
 
-## 
+## 680 Valid Panlindrome
+Thanks for the solution provided by the problem. The idea behind is very easy:
+
+Check from left and right toward the center, if there is a mismatch between s[i] and s[j] (for i < j), there has to be a palindrome either in s[i+1]-s[j] or in s[i]-s[j-1]
+
+Time complexity: O(n), space complexity: O(1)
+
