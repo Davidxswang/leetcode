@@ -190,3 +190,9 @@ Check from left and right toward the center, if there is a mismatch between s[i]
 
 Time complexity: O(n), space complexity: O(1)
 
+## 703 Kth Largest Element in a Stream
+The solution proposed by @lccn345 in the discussion area is very good. Heap and bisect are used.
+
+[Check it out here.](https://leetcode.com/problems/kth-largest-element-in-a-stream/discuss/639723/AC-simply-readable-Python)
+
+## 
