@@ -195,4 +195,7 @@ The solution proposed by @lccn345 in the discussion area is very good. Heap and 
 
 [Check it out here.](https://leetcode.com/problems/kth-largest-element-in-a-stream/discuss/639723/AC-simply-readable-Python)
 
-## 
+## 696 Count Binary Substrings
+I didn't come up with the second solution. Thanks to the solution provided by the question.
+
+It's very trick here because when we finish the traverse, the last pair doesn't get updated to the answer. Therefore, we need to update it by ourselves.
