@@ -53,3 +53,21 @@ class Solution:
                 stackt.pop()
 
         return stacks == stackt
+
+# The second solution provided by the problem set is very beautiful.
+
+# time complexity: O(n), space complexity: O(1)
+class Solution:
+    def backspaceCompare(self, S: str, T: str) -> bool:
+        import itertools
+        def F(S):
+            skip = 0
+            for x in reversed(S):
+                if x == '#':
+                    skip += 1
+                elif skip:
+                    skip -= 1
+                else:
+                    yield x
+
+        return all(x == y for x, y in itertools.zip_longest(F(S), F(T)))

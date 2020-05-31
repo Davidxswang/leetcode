@@ -204,3 +204,6 @@ It's very trick here because when we finish the traverse, the last pair doesn't 
 The two solutions provided by the problem are both very interesting, worth taking a look. [Here is the link.](https://leetcode.com/problems/rectangle-overlap/solution/)
 
 ## 844 Backspace String Compare
+The second solution provided by the problem set uses generator and very neat and clean. [Check it out.](https://leetcode.com/problems/backspace-string-compare/solution/)
+
+## 
