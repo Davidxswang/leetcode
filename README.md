@@ -199,3 +199,8 @@ The solution proposed by @lccn345 in the discussion area is very good. Heap and 
 I didn't come up with the second solution. Thanks to the solution provided by the question.
 
 It's very trick here because when we finish the traverse, the last pair doesn't get updated to the answer. Therefore, we need to update it by ourselves.
+
+## 836 Rectangle Overlap
+The two solutions provided by the problem are both very interesting, worth taking a look. [Here is the link.](https://leetcode.com/problems/rectangle-overlap/solution/)
+
+## 844 Backspace String Compare
