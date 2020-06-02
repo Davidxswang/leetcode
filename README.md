@@ -1,6 +1,9 @@
 # What is this?
 I decided to walk through the LeetCode problems 10/day, and publish some of the solutions here. Hopefully it will be helpful for myself or some of you in front of the screen.
 
+Space complexity by defaulted is counted by the extra space used by the program, omitting the call stack and the output variables.
+
+
 # Some very interesting problems
 ## 28 Implement strStr()
 KMP pattern search algorithm use a O(m+n) time complexity to search a substring in a string, which is really incredible. The key actually is to make use of the information embedded in the pattern string.
