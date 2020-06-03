@@ -67,3 +67,12 @@ class Solution:
                     return True
 
         return False
+
+# There is a faster way, using greatest common denominator. This is provided by the solution.
+# time complexity: O(n(logm)^2), space complexity: O(n), where n is the length of the list, m is the largest number of Ci where there are Ci cards written i on it.
+# gcd is a (logm)^2 operation.
+class Solution:
+    def hasGroupsSizeX(self, deck: List[int]) -> bool:
+        from fractions import gcd
+        vals = collections.Counter(deck).values()
+        return reduce(gcd, vals) >= 2
