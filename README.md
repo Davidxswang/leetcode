@@ -209,4 +209,15 @@ The two solutions provided by the problem are both very interesting, worth takin
 ## 844 Backspace String Compare
 The second solution provided by the problem set uses generator and very neat and clean. [Check it out.](https://leetcode.com/problems/backspace-string-compare/solution/)
 
+## 942 DI String Match
+The problem seems hard but when you see the solution, you will be surprised by how easily it can be solved.
+
+It always makes the best-for-now and best-for-next decision.
+
+If right now, it's an increase, it's better we put the current smallest available number here; on the other hand, if right now, it's a decrease, it's better we put the current largest available number here.
+
+By this rule, we can use up all the 0..N numbers, and we can guarantee that if there is an increase, the next number is larger than current number and if there is a decrease, the next is smaller than current one.
+
+Very smart solution, and easy to implement. Just hard to think.
+
 ## 
