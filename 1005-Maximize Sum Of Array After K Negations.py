@@ -30,7 +30,7 @@ Note:
 -100 <= A[i] <= 100
 """
 
-# time complexity: O(n), space complexity: O(1)
+# time complexity: O(nlogn), space complexity: O(1)
 
 class Solution:
     def largestSumAfterKNegations(self, A: List[int], K: int) -> int:
