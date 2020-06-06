@@ -225,5 +225,10 @@ Very smart solution, and easy to implement. Just hard to think.
 
 The idea is to send every one to city A. Then we need to send half of them to city B. When we do this, we need to see who can give us the most refund if we send them. So we sort them by refund and send the most refund N people to city B and the rest stay in A.
 
-## 
+## 1042 Flower Planting With No Adjacent
+This is a very good problem. The solution provided by [@lee215](https://leetcode.com/problems/flower-planting-with-no-adjacent/discuss/290858/JavaC%2B%2BPython-Greedily-Paint) is very good.
+
+We just need to remember what nodes each node cannot share color with, then we can assign each node a color from those colors that are current available.
+
+
  
