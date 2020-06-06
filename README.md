@@ -220,4 +220,10 @@ By this rule, we can use up all the 0..N numbers, and we can guarantee that if t
 
 Very smart solution, and easy to implement. Just hard to think.
 
+## 1029 Two City Scheduling
+[@logan138](https://leetcode.com/problems/two-city-scheduling/discuss/667786/Java-or-C%2B%2B-or-Python3-or-With-detailed-explanation) provided a very good solution.
+
+The idea is to send every one to city A. Then we need to send half of them to city B. When we do this, we need to see who can give us the most refund if we send them. So we sort them by refund and send the most refund N people to city B and the rest stay in A.
+
 ## 
+ 
