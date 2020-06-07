@@ -230,5 +230,16 @@ This is a very good problem. The solution provided by [@lee215](https://leetcode
 
 We just need to remember what nodes each node cannot share color with, then we can assign each node a color from those colors that are current available.
 
+## 1089 Duplicate Zeros
+In this problem, the edge case is very tricky to deal with. I do two traverses, first to discover the last element to deal with, and second traverse to put every element to the correct place.
 
- 
+In the first traverse, read and write can end up with read == write or ready == write + 1 two are different situations:
+
+- read==write means:
+    - read += 1, then read meet write, in this case write did not move at the last move of read
+    - read(0), 1, write, after this situation, read += 1 and write -= 1, so read and write meet. 
+    - In both cases, this element that write is pointing to at the last, should not be repeated, because this one is literally the last element in the new list.
+
+- read==write+1 means read finds a 0 this is second to the last element of the new list and this 0 should be repeated in this case.
+
+So in the second traversal, we need to deal with these two ending situations to make sure the last element can be taken good care of.
