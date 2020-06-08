@@ -243,3 +243,9 @@ In the first traverse, read and write can end up with read == write or ready == 
 - read==write+1 means read finds a 0 this is second to the last element of the new list and this 0 should be repeated in this case.
 
 So in the second traversal, we need to deal with these two ending situations to make sure the last element can be taken good care of.
+
+## Remove Palindromic Subsequences
+This is a very tricky questions. I got the help from [@lee215](https://leetcode.com/problems/remove-palindromic-subsequences/discuss/490303/JavaC%2B%2BPython-Maximum-2-Operations) in the discussion area.
+
+A very important thing we need to know is that a subsequence of a string doesn't need to be consecutive.
+
