@@ -252,3 +252,15 @@ This is a very tricky questions. I got the help from [@lee215](https://leetcode.
 A very important thing we need to know is that a subsequence of a string doesn't need to be consecutive.
 
 ## Medium Problems
+### 11 Container With Most Water
+This is an interestring question. The volume of the water depends three things:
+
+- the left bar
+- the right bar
+- distance between left and right bars
+
+For any given pair of bars, the volume depends on the shorter bar. So what we should do is check the volume of current configuration and make the two bar closer by moving the pointer which is pointing the shorter bar closer to the other pointer.
+
+The reason why we do this is that the current configuration is limited by the shorter bar, and by moving it, we might get a change to make the result better. Imagine that we move the longer one and get a even longer bar, but the volume is still limited by the shorter one that we didn't move, which is not what we would want.
+
+### 
