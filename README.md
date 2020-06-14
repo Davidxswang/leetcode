@@ -270,3 +270,8 @@ To make it faster, we can early stop when the fixed number is larger than 0 beca
 
 ### 16 3Sum Closest
 This is very similar to the question above. The idea is to fix one number and go over the number behind it and the array should be sorted. 
+
+### 17 Letter Combinations of a Phone Number
+This is a very good example of recursion. I got the inspiration from the solution provided with the questions.
+
+Every time we can just take a number in the front of the digits and loop in its possible representations and recursively call the recursion process until there is no more digit to extract.
