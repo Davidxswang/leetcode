@@ -263,4 +263,7 @@ For any given pair of bars, the volume depends on the shorter bar. So what we sh
 
 The reason why we do this is that the current configuration is limited by the shorter bar, and by moving it, we might get a change to make the result better. Imagine that we move the longer one and get a even longer bar, but the volume is still limited by the shorter one that we didn't move, which is not what we would want.
 
-### 
+### 15 3Sum
+This is a very classic question. Thanks to the excellent explanation from [@christopherwu052](https://leetcode.com/problems/3sum/discuss/232712/Best-Python-Solution-(Explained)). The idea is to first sort the numbers, then for each number, fix it and look all the numbers after it using two pointers. The process of using two pointers to look for a value is just like 2sum.
+
+To make it faster, we can early stop when the fixed number is larger than 0 because there is no way we can make the sum equal to 0 if the smallest of the three is larger than 0.
