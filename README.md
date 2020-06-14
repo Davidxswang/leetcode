@@ -267,3 +267,6 @@ The reason why we do this is that the current configuration is limited by the sh
 This is a very classic question. Thanks to the excellent explanation from [@christopherwu052](https://leetcode.com/problems/3sum/discuss/232712/Best-Python-Solution-(Explained)). The idea is to first sort the numbers, then for each number, fix it and look all the numbers after it using two pointers. The process of using two pointers to look for a value is just like 2sum.
 
 To make it faster, we can early stop when the fixed number is larger than 0 because there is no way we can make the sum equal to 0 if the smallest of the three is larger than 0.
+
+### 16 3Sum Closest
+This is very similar to the question above. The idea is to fix one number and go over the number behind it and the array should be sorted. 
