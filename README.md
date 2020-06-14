@@ -275,3 +275,8 @@ This is very similar to the question above. The idea is to fix one number and go
 This is a very good example of recursion. I got the inspiration from the solution provided with the questions.
 
 Every time we can just take a number in the front of the digits and loop in its possible representations and recursively call the recursion process until there is no more digit to extract.
+
+### 22 Generate Parentheses
+This is inspired by [@brobins9](https://leetcode.com/problems/generate-parentheses/discuss/10100/Easy-to-understand-Java-backtracking-solution) in the discussion area.
+
+The idea behind is to always put '(' in the string first, and then put the same number of ')' in the string. If the length of the string is not enough compared with 2*n, repeat the process above. This is very brilliant.
