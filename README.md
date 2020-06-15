@@ -280,3 +280,10 @@ Every time we can just take a number in the front of the digits and loop in its 
 This is inspired by [@brobins9](https://leetcode.com/problems/generate-parentheses/discuss/10100/Easy-to-understand-Java-backtracking-solution) in the discussion area.
 
 The idea behind is to always put '(' in the string first, and then put the same number of ')' in the string. If the length of the string is not enough compared with 2*n, repeat the process above. This is very brilliant.
+
+### 29 Divide Two Integers
+This is inspired by [@tusizi](https://leetcode.com/problems/divide-two-integers/discuss/13403/Clear-python-code) in the discussion area.
+
+The idea is to subtract a divisor*(2^i) from dividend and if we succeed, we add this 2^i to the result. We repeat the process until dividend < divisor.
+
+
