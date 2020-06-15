@@ -296,3 +296,9 @@ In the Wikipedia, it says this method actually came from Narayana Pandita in 14t
 	3. Swap the value of a[k] with that of a[l].
 	4. Reverse the sequence from a[k + 1] up to and including the final element a[n].
 
+### 34 Find First and Last Position of Element in Sorted Array
+It is inspired by [@baby_groot](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/discuss/14699/Clean-iterative-solution-with-two-binary-searches-(with-explanation)) in the discussion area.
+
+His (I assume it's he) code is very concise and elegant. The idea is to not stop and return when finding one target, instead, we should let the program narrow down until left and right points to the same element. In this case, either we have found the element, or there is no such target. If we have found such target, we can find leftmost one and the rightmost one.
+
+The trick here is how to deal with the *equal* case.
