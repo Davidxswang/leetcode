@@ -2,3 +2,4 @@
 _config.yml
 !/medium
 !/hard
+*.swp
