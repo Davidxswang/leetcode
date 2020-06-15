@@ -286,4 +286,13 @@ This is inspired by [@tusizi](https://leetcode.com/problems/divide-two-integers/
 
 The idea is to subtract a divisor*(2^i) from dividend and if we succeed, we add this 2^i to the result. We repeat the process until dividend < divisor.
 
+### 31 Next Permutation
+
+This is inspired by [@yuyibestman](https://leetcode.com/problems/next-permutation/discuss/13866/Share-my-O(n)-time-solution) in the discussion area. 
+
+In the Wikipedia, it says this method actually came from Narayana Pandita in 14th century India. The method is:
+	1. Find the largest index k such that a[k] < a[k + 1]. If no such index exists, the permutation is the last permutation.
+	2. Find the largest index l greater than k such that a[k] < a[l].
+	3. Swap the value of a[k] with that of a[l].
+	4. Reverse the sequence from a[k + 1] up to and including the final element a[n].
 
