@@ -302,3 +302,10 @@ It is inspired by [@baby_groot](https://leetcode.com/problems/find-first-and-las
 His (I assume it's he) code is very concise and elegant. The idea is to not stop and return when finding one target, instead, we should let the program narrow down until left and right points to the same element. In this case, either we have found the element, or there is no such target. If we have found such target, we can find leftmost one and the rightmost one.
 
 The trick here is how to deal with the *equal* case.
+
+### 43 Multiply Strings
+This is inspired by [@yavinci](https://leetcode.com/problems/multiply-strings/discuss/17605/Easiest-JAVA-Solution-with-Graph-Explanation) in the discussion area.
+
+The idea is to multiply each digit of num1 by each digit of num2 and put them in the right place in the result string. Then sum all the numbers in the same spot in the result string.
+
+I have to say this is a very elegant way of solving this problem.
