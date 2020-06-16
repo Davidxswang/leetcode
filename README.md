@@ -286,6 +286,10 @@ This is inspired by [@tusizi](https://leetcode.com/problems/divide-two-integers/
 
 The idea is to subtract a divisor*(2^i) from dividend and if we succeed, we add this 2^i to the result. We repeat the process until dividend < divisor.
 
+### 50 Pow(x, n)
+This is very similar to question 29. Every time multiply a x^(2^i) to the result and subtract 2^i from n, until n == 0.
+ 
+
 ### 31 Next Permutation
 
 This is inspired by [@yuyibestman](https://leetcode.com/problems/next-permutation/discuss/13866/Share-my-O(n)-time-solution) in the discussion area. 
