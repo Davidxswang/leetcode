@@ -313,3 +313,14 @@ This is inspired by [@yavinci](https://leetcode.com/problems/multiply-strings/di
 The idea is to multiply each digit of num1 by each digit of num2 and put them in the right place in the result string. Then sum all the numbers in the same spot in the result string.
 
 I have to say this is a very elegant way of solving this problem.
+
+### 55 Jump Game
+This is a very classic dynamic programming problem.
+
+	1. If from position A, one can jump to the last element, position A is good.
+	2. The last element is good.
+	3. If the leftmost good element is within the jump range of the current element, the current element is good as well.
+	4. Now what we need to do is just check whether position=0 is good or not.
+
+
+
