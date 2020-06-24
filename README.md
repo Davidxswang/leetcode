@@ -322,5 +322,9 @@ This is a very classic dynamic programming problem.
 	3. If the leftmost good element is within the jump range of the current element, the current element is good as well.
 	4. Now what we need to do is just check whether position=0 is good or not.
 
+### 77 Combinations
+[@vision57](https://leetcode.com/problems/combinations/discuss/27024/1-liner-3-liner-4-liner) in discussion area provided a very good post.
 
+There are basically two ways to solve this question: iteration or recursion. Recursion is fast, but consumes a lot of space. 
 
+ 
