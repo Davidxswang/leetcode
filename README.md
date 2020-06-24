@@ -327,4 +327,21 @@ This is a very classic dynamic programming problem.
 
 There are basically two ways to solve this question: iteration or recursion. Recursion is fast, but consumes a lot of space. 
 
- 
+### 75 Sort Colors
+[@girikuncoro](https://leetcode.com/problems/sort-colors/discuss/26481/Python-O(n)-1-pass-in-place-solution-with-explanation) pointed out that this is a Dutch partition problem, [wiki](https://en.wikipedia.org/wiki/Dutch_national_flag_problem).
+
+The partition is like this: red: [0:red], unclassified(white): [red: blue+1], blue: [blue+1:]. At the beginning three pointers are like this:
+
+- red = 0
+- white = 0
+- blue = len(nums)-1
+
+Then we need to let white pointer move from left to right until it finishes checking the last unclassified element which should be where blue is.
+
+- if white = 0: swap it with red, then red++,white++. Here we can ++ both becausewhen we start, we can make sure red was 1 before swapping, and after swapping, we can make sure white is 1 now, so we can ++ both.
+
+- if white = 1: white ++, move on.
+
+- if white = 2: this should be put out of the unclassified area, so we swap it with blue and move blue to the left by 1.
+
+
