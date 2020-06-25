@@ -345,3 +345,13 @@ Then we need to let white pointer move from left to right until it finishes chec
 - if white = 2: this should be put out of the unclassified area, so we swap it with blue and move blue to the left by 1.
 
 
+### 92 Reverse Linked List II
+This question requires us to reverse part of the linked list given the start and end index of the linked list.
+
+The keys here are:
+
+- find the m-1 node
+- reverse the m to n nodes
+- connect m-1 node with n node, connect m node with n+1 node
+
+It's not easy to think of the solution but it's very tricky to handle the edge cases of the coding.
