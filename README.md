@@ -355,3 +355,10 @@ The keys here are:
 - connect m-1 node with n node, connect m node with n+1 node
 
 It's not easy to think of the solution but it's very tricky to handle the edge cases of the coding.
+
+### 89 Gray Code
+This question asks us to build a Gray Code of length n.
+
+The solution is inspired by [@yuyibestman](https://leetcode.com/problems/gray-code/discuss/29891/Share-my-solution) and the code is provided by @zkf85 in the discussion area.
+
+The main idea comes from the symmetricity here: 00,01,11,10 -> (000,001,011,010)(110,111,101,100). The first part actually is the original part from n-1, the second part is built by putting a 1 in the front. 
