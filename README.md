@@ -373,4 +373,13 @@ When we process each node, we traverse its right, left, then itself. After we fi
 
 After we are done, the tree is one that every node only has its right child.
 
+### 109 Convert Sorted List to Binary Search Tree
+The most interesting solution is provided by this question's solution. 
+
+The way we do it is that we pretend we can find the middle element but we don't really find it directly. Instead, we run the program on left half size and find the left node that it returns, build the root node using the current head, then connect the left node to the root's left, move the head to the next linked node, run the same process on the right half and gets the right node, connect to root's right node. 
+
+I think the key here is to move the head to the right by one, because actually, every time, we reach each valid node, we always move the head by one, and that is the way we generate the list by a binary search tree actually.
+
+It's better to check out the [original page of the solution posted by the question](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/solution/)
+
 
