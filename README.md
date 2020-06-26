@@ -387,4 +387,9 @@ The solution is inspired by [@yavinci](https://leetcode.com/problems/populating-
 
 The main idea is to use the current node/layer to set up its left and right children. It utilizes an implication that root is a single node which can be seen as a completed layer.
 
+### 134 Gas Station
+This solution is provided by [@clue](https://leetcode.com/problems/gas-station/discuss/42568/Share-some-of-my-ideas./41006) in the discussion area.
 
+The main idea is to use a gas_needed var to store how much gas at least we should have when we reach the end. If at the end, the gas we have is more than gas_needed, we are okay, and the index that we started is the result, otherwise no solution.
+
+Sure if the total gas is less than total cost, there is no solution, and this should be checked first.
