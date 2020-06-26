@@ -382,4 +382,9 @@ I think the key here is to move the head to the right by one, because actually, 
 
 It's better to check out the [original page of the solution posted by the question](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/solution/)
 
+### 116 Populating Next Right Pointers in Each Node
+The solution is inspired by [@yavinci](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/discuss/37472/A-simple-accepted-solution/35554) in the discussion area.
+
+The main idea is to use the current node/layer to set up its left and right children. It utilizes an implication that root is a single node which can be seen as a completed layer.
+
 
