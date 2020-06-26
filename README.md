@@ -393,3 +393,9 @@ This solution is provided by [@clue](https://leetcode.com/problems/gas-station/d
 The main idea is to use a gas_needed var to store how much gas at least we should have when we reach the end. If at the end, the gas we have is more than gas_needed, we are okay, and the index that we started is the result, otherwise no solution.
 
 Sure if the total gas is less than total cost, there is no solution, and this should be checked first.
+
+
+### 137 Single Number
+This solution is provided by [@felixhao28](https://leetcode.com/problems/single-number-ii/discuss/43296/An-General-Way-to-Handle-All-this-sort-of-questions./42189) in the discussion area.
+
+The key here is find a way that is commutative and circular, the way we do this is modulo. We can count each bits using a modulo by 3 in this case, then all the effects created by those elements appear 3 times in the array will be eliminated, only the one that appears once is left. Bingo!
