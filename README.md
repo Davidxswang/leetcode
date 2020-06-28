@@ -405,3 +405,13 @@ The key here is find a way that is commutative and circular, the way we do this 
 I think this question should be rated as a hard question. The key here is to build a graph using connectivity which is 1 letter different from each other. Then starting from the beginWord, using Breadth First Search to traverse the graph, if we can meet the endWord, solution is at hand; otherwise, there is no solution. This is so brilliant.
 
 The solutions are provided by the solution set with the question. [Check this out.](https://leetcode.com/problems/word-ladder/solution/)
+
+### 139 Word Break
+The solution is inspired by [@segfault](https://leetcode.com/problems/word-break/discuss/43790/Java-implementation-using-DP-in-two-ways) in the discussion area.
+
+The main idea is to check very position of the array see if it's good. When we say the position i is good, it means s[0:i+1] can be broken using the words in the word array.
+
+- If the s[0:i+1] in word array, i is good.
+- If not, look from i to 0 (say it's j), see if j is good and s[j+1:i+1] is in word array, if so, it's good, if not, i is bad.
+
+
