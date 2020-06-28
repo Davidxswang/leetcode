@@ -414,4 +414,12 @@ The main idea is to check very position of the array see if it's good. When we s
 - If the s[0:i+1] in word array, i is good.
 - If not, look from i to 0 (say it's j), see if j is good and s[j+1:i+1] is in word array, if so, it's good, if not, i is bad.
 
+### 142 Linked List Cycle II
+The O(1) space solution is inspired by [@Dico](https://leetcode.com/problems/linked-list-cycle-ii/discuss/44793/O(n)-solution-by-using-two-pointers-without-change-anything/199854) in the discussion area. Also these two videos helped a lot: [linked1](https://www.youtube.com/watch?time_continue=2&v=zbozWoMgKW0) and [link2](https://www.youtube.com/watch?v=LUm2ABqAs1w).
 
+Actually this solution utilizes Floyd's Algorithm to detect the loop:
+1. Use slow and fast two pointers to go through the linked list, the speed is 1 and 2 respectively. If they never meet, there is no loop in the linked list.
+2. If slow and fast pointers meet at some time, there is a loop, now we need to find the start point of the loop:
+3. Let's use q and p pointing to head and the node where slow and fast meet, let them move 1 step forward each time, when they meet, they meet at the start node of the loop.
+
+The videos I mentioned above gave a very good explanation, please check out!
