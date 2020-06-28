@@ -25,7 +25,7 @@ cache.get(3);       // returns 3
 cache.get(4);       // returns 4
 """
 
-# two methods are provided, both of them are inspired by @zdwu in the discussion
+# two methods are provided, both of them are inspired by @tusizi in the discussion
 # The first is using ordered list provided by python collections package
 # The second is using double linked list and dictionary. The double linked list is for storing the order, the dictionary is for storing the key-node mapping.
 # time complexity: O(1) for both, space complexity: O(n), second uses more space compared with the first one.
