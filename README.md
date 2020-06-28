@@ -423,3 +423,8 @@ Actually this solution utilizes Floyd's Algorithm to detect the loop:
 3. Let's use q and p pointing to head and the node where slow and fast meet, let them move 1 step forward each time, when they meet, they meet at the start node of the loop.
 
 The videos I mentioned above gave a very good explanation, please check out!
+
+### 148 Sort List
+The solution is inspired by [@zdwu](https://leetcode.com/problems/sort-list/discuss/46712/Bottom-to-up(not-recurring)-with-o(1)-space-complextity-and-o(nlgn)-time-complextity) in the discussion area.
+
+This question is very good. The key here is to use a step to control the bucket manually. When we split, we cut two small pieces with length "step" from the list and merge them together; when we merge, we connect them two together and connect it to the formaly finished the tail, and return the tail of the finished list this time.
