@@ -463,3 +463,7 @@ In the [Python Documentation](https://docs.python.org/3/howto/sorting.html), it 
 
 So we cannot sort the array reversely by overriding __gt__ method.
 
+### 166 Fraction to Recurring Decimal
+The solution is inspired by [@tusizi](https://leetcode.com/problems/fraction-to-recurring-decimal/discuss/51110/Do-not-use-python-as-cpp-here's-a-short-version-python-code) in the discussion area.
+
+It's not hard to code, it's just not easy to integrate all of these together in such a concise way.
