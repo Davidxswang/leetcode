@@ -428,3 +428,13 @@ The videos I mentioned above gave a very good explanation, please check out!
 The solution is inspired by [@zdwu](https://leetcode.com/problems/sort-list/discuss/46712/Bottom-to-up(not-recurring)-with-o(1)-space-complextity-and-o(nlgn)-time-complextity) in the discussion area.
 
 This question is very good. The key here is to use a step to control the bucket manually. When we split, we cut two small pieces with length "step" from the list and merge them together; when we merge, we connect them two together and connect it to the formaly finished the tail, and return the tail of the finished list this time.
+
+### 162 Find Peak Element
+
+The main idea here is to use a binary search algorithm to find a peak. Since we only need to find one peak, we can let the search range shrink 1/2 every time. 
+
+The shrink direction is the key. We should let it shrink to the direction where the middle element gets higher.
+
+At the end, when start == end, there is only one element in the search range, this element will be a peak we can return.
+
+Every time when we shrink, we are actually let the middle go uphill, so the edge element in the range will gets higher and higher. This is the reason why it can find a peak.
