@@ -438,3 +438,12 @@ The shrink direction is the key. We should let it shrink to the direction where 
 At the end, when start == end, there is only one element in the search range, this element will be a peak we can return.
 
 Every time when we shrink, we are actually let the middle go uphill, so the edge element in the range will gets higher and higher. This is the reason why it can find a peak.
+
+### 152 Maximum Product Subarray
+This solution is inspired by [@mzchen](https://leetcode.com/problems/maximum-product-subarray/discuss/48230/Possibly-simplest-solution-with-O(n)-time-complexity) in the discussion area. 
+
+Using dynamic programming, we can log the min and max at every position, representing the min and max we can get at every position.
+
+The trick here is when we meet a negative element, we should swap the min and max.
+
+At every position, we should choose to use the prior result (max or min) or not. If we don't use the prior result and we can get better result, then we should not use the prior result. 
