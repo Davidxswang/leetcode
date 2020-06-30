@@ -447,3 +447,19 @@ Using dynamic programming, we can log the min and max at every position, represe
 The trick here is when we meet a negative element, we should swap the min and max.
 
 At every position, we should choose to use the prior result (max or min) or not. If we don't use the prior result and we can get better result, then we should not use the prior result. 
+
+### 179 Largest Number
+This is provided by the solution set of the question. 
+
+The trick here is to use the subclass to define the less than (<) logic and let the sort method to sort the string using < but it actually gets the string ordered in a descending order.
+
+We can not just use reverse=True argument to reversely sort the string, because that will bring some problem when two strings start with the same prefix, like 30,3 and 3,30 in the example of the question.
+
+The logic of < is: if a+b > b+a, a should go first in the list because this will provide a larger final result.
+
+In the [Python Documentation](https://docs.python.org/3/howto/sorting.html), it says:
+
+> The sort routines are guaranteed to use __lt__() when making comparisons between two objects. So, it is easy to add a standard sort order to a class by defining an __lt__() method.
+
+So we cannot sort the array reversely by overriding __gt__ method.
+
