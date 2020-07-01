@@ -490,4 +490,11 @@ To prove its correctness, we need to answer these following questions:
         
         Proved (badly though)
 
+### 207 Course Schedule
+This is inspired by the [solution of problem 210](https://leetcode.com/problems/course-schedule-ii/solution/) and [@hnoss](https://leetcode.com/problems/course-schedule/discuss/58516/Easy-BFS-Topological-sort-Java/59977) in the discussion area.
 
+The main idea is to process each free courses (those don't have prerequisite). After learn the prerequisite courses, its control to the downstream courses can be removed. All the free courses due to this process should be moved to the free courses set until there is no free courses.
+
+If there is no free courses anymore, we need to check if there is remaining edges, if there is any remaining edges, it means all the rest of the courses have a cycle in it because all of them have incoming courses so we cannot start from either of them.
+
+This is very similar to [the 210 question](https://leetcode.com/problems/course-schedule-ii/).
