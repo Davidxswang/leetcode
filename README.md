@@ -498,3 +498,9 @@ The main idea is to process each free courses (those don't have prerequisite). A
 If there is no free courses anymore, we need to check if there is remaining edges, if there is any remaining edges, it means all the rest of the courses have a cycle in it because all of them have incoming courses so we cannot start from either of them.
 
 This is very similar to [the 210 question](https://leetcode.com/problems/course-schedule-ii/).
+
+
+### 220 Contains Duplicate III
+The solution is provided by [@jac24](https://leetcode.com/problems/contains-duplicate-iii/discuss/61731/O(n)-Python-using-buckets-with-explanation-10-lines.) in the discussion area.
+
+The main idea is to scale down all the numbers by t -> scaledDownNumber, then only search from scaleDownNumber-1 to scaledDown+1 to see if there is any number in the bucket and if the number satisfy the requirement. We need to make the bucket number fixed length, length = k so as long as we find some number in the buckets, that will be the solution.
