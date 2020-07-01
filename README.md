@@ -467,3 +467,27 @@ So we cannot sort the array reversely by overriding __gt__ method.
 The solution is inspired by [@tusizi](https://leetcode.com/problems/fraction-to-recurring-decimal/discuss/51110/Do-not-use-python-as-cpp-here's-a-short-version-python-code) in the discussion area.
 
 It's not hard to code, it's just not easy to integrate all of these together in such a concise way.
+
+### 201 Bitwise AND of Numbers Range
+This is the most simplest solution that I have ever seen, but it's not easy to prove its correctness.
+The solution is provided by [@GatsbyLee](https://leetcode.com/problems/bitwise-and-of-numbers-range/discuss/56729/Bit-operation-solution(JAVA)/58148) in the discussion area.
+
+To prove its correctness, we need to answer these following questions:
+
+1. is the range correct? "while x > m"
+	1.1 the start of the range is correct, i.e. we start from n.
+	1.2 the end of the range is correct, i.e. the last iteration we should do is when x == m+1, we do x & m, which is correct.
+        1.3 what if m == n? the correctness of the algorithm in this case is obvious.
+
+2. is the x &= x-1 correct?
+        2.1 suppose every time x & (x-1) give us x-1, then the correctness is obvious.
+        2.2 what if x & (x-1) < x-1, say x & (x-1) = x-23? for some x s.t. m < x <= n. Actually x & (x-1) will perserve the common prefix of x and x-1, and set some tail to 0. What we are worried about is the elements that we missed between x-1 and x-23. We don't need to worry because whatever elements between x-1 and x-23, after we do & to all of them, we will get x-23 => the common prefix will always be preserved, the tail 0 will give us 0 always.
+
+3. is the "return x" correct?
+        3.1 from 2.2, we can see, x & (x-1) will give us some result. This result is the & of all the elements from [this result, x]. If result > m, we can keep doing this. No problem here.
+        3.2 if result == m: return m. The correctness is obvious.
+        3.3 if result < m, return result. From 2.2 we know, even though we & the number between x-1 and m, we will still get this "result", so the result is correct.
+        
+        Proved (badly though)
+
+
