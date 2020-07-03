@@ -504,3 +504,17 @@ This is very similar to [the 210 question](https://leetcode.com/problems/course-
 The solution is provided by [@jac24](https://leetcode.com/problems/contains-duplicate-iii/discuss/61731/O(n)-Python-using-buckets-with-explanation-10-lines.) in the discussion area.
 
 The main idea is to scale down all the numbers by t -> scaledDownNumber, then only search from scaleDownNumber-1 to scaledDown+1 to see if there is any number in the bucket and if the number satisfy the requirement. We need to make the bucket number fixed length, length = k so as long as we find some number in the buckets, that will be the solution.
+
+
+### 229 Majority Element II
+This solution is provided by [@orbuluh](https://leetcode.com/problems/majority-element-ii/discuss/63520/Boyer-Moore-Majority-Vote-algorithm-and-my-elaboration) in the discussion area. 
+
+The algorithm is called Boyer-Moor Majority Vote algorithm. The main idea is that: if the element is a major element, there should be at least one more this element than other element.
+
+In majority element problem I, we use one counter and one candidate to find this element since there is at most only 1 such element; in this question, we can use two counters and two candidates to find the potential answer to this question.
+
+The first traversal will give us two candidates, which should be, ideally, the majority element. The second traversal will verify this by count their appearances in the list again.
+
+The definition of the majority depends on the question. Here to be major element, it has to appear more than floor(n/3) times, where n is the length of the list.
+
+
