@@ -517,4 +517,9 @@ The first traversal will give us two candidates, which should be, ideally, the m
 
 The definition of the majority depends on the question. Here to be major element, it has to appear more than floor(n/3) times, where n is the length of the list.
 
+### 236 Lowest Common Ancestor of a Binary Tree
+The two solutions are provided by the [solution of the question](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/).
 
+The first algorithm will count how many places q and p appear among left, itself, right of a node. If we ever see left+itself+right == 2, that is the answer we are looking for.
+
+The second algorithm will traverse the tree and mark down the parent node of each node in the tree. After traversal, we will go from p and build a path from p to root. Then we go from q to root, when we see first time a node appears in both paths, that is the answer we are looking for.
