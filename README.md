@@ -154,9 +154,9 @@ This is not a hard question, just need to think thoroughly. Given a sequence, th
     
     2. maximum = 0. In this case, we can find 0 and another 2 negative numbers to make the product = 0, which is largest.
     
-    3. maximum > 0. In this case, we can find the maximum by max[0]*max[1]*max[2] or max*min[0]*min[1] whichever is larger.
+    3. maximum > 0. In this case, we can find the maximum by max[0]\*max[1]\*max[2] or max\*min[0]\*min[1] whichever is larger.
     
-So combining them all together, we can get: max = max(max[0]*max[1]*max[2], max*min[0]*min[1]).
+So combining them all together, we can get: max = max(max[0]\*max[1]\*max[2], max\*min[0]\*min[1]).
 
 Thanks to the solution provided by the questions. [Check it out.](https://leetcode.com/problems/maximum-product-of-three-numbers/solution/)
 
@@ -535,5 +535,11 @@ This is a very genious way to solve this problem. We should see this problem bot
 - if four numbers are in the string, f(1)\*f(3)+f(2)\*f(2)+f(3)\*f(1) to calculate it
 
 The solution is just a top-down method of calculating it.
+
+### 260 Single Number III
+
+The solution is inspired by [@zhiqing_xiao](https://leetcode.com/problems/single-number-iii/discuss/68900/Accepted-C%2B%2BJava-O(n)-time-O(1)-space-Easy-Solution-with-Detail-Explanations) in the discussion area.
+
+The key here is to use one bit to separate the nums into two groups and use the xor(n1,n2) to find out the n1 in one group and n2 in the other group.
 
 
