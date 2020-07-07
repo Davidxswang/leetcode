@@ -555,3 +555,11 @@ The solution is provided by the [solution of the question](https://leetcode.com/
 The solution is to treat the nums list as the linked list and the numbers it stores are the pointers which point to the position of the next element.
 
 The question then becomes: find the start of the cycle of the linked list, which we can apply Floyd's Algorithm to solve.
+
+
+### 279 Perfect Squares
+The solution is inspired by [@ChrisZhang12240](https://leetcode.com/problems/perfect-squares/discuss/71475/Short-Python-solution-using-BFS). [@lnmlv](https://leetcode.com/problems/perfect-squares/discuss/71475/Short-Python-solution-using-BFS/190812) mentioned the [Lagrange's Four-Square Theorem](https://en.wikipedia.org/wiki/Lagrange%27s_four-square_theorem).
+
+This theorem states that every natural number can be represented by the sum of four integer squares, therefore the depth of the tree will be at most 4, the width of the tree will be at most sqrt(n), so the total time complexity will be upbounded by O(n^2) in the worst case.
+
+
