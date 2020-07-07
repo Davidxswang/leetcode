@@ -147,7 +147,7 @@ Dynamic programming problem. Greedily search the available spot and put the plan
 
 Thanks to the solution provided by @awice and @PhilF in the discussion area. [Link is here.](https://leetcode.com/problems/can-place-flowers/discuss/103890/Python-Straightforward-with-Explanation)
 
-### Maximum Product of Three Numbers
+### 628 Maximum Product of Three Numbers
 This is not a hard question, just need to think thoroughly. Given a sequence, the maximum product of three numbers happens either in following three cases:
     
     1. maximum < 0. In this case, we should find the maximal 3 numbers to make the product maximum.
@@ -173,7 +173,7 @@ To save the extra space (space due to call stack omitted), I used two iterators 
 
 Hope you find this solution interesting. I also posted this solution here, [check it out.](https://leetcode.com/problems/two-sum-iv-input-is-a-bst/discuss/647955/Python-Solution-Time-O(n)-Space-O(1)-using-Iterator-Yield)
 
-### Second Minimum Node In a Binary Tree
+### 672 Second Minimum Node In a Binary Tree
 Thanks for the solution provided by the problem. The basic idea is
 
 - The global minimum is root.val for sure.
@@ -246,7 +246,7 @@ In the first traverse, read and write can end up with read == write or ready == 
 
 So in the second traversal, we need to deal with these two ending situations to make sure the last element can be taken good care of.
 
-### Remove Palindromic Subsequences
+### 1332 Remove Palindromic Subsequences
 This is a very tricky questions. I got the help from [@lee215](https://leetcode.com/problems/remove-palindromic-subsequences/discuss/490303/JavaC%2B%2BPython-Maximum-2-Operations) in the discussion area.
 
 A very important thing we need to know is that a subsequence of a string doesn't need to be consecutive.
@@ -523,3 +523,17 @@ The two solutions are provided by the [solution of the question](https://leetcod
 The first algorithm will count how many places q and p appear among left, itself, right of a node. If we ever see left+itself+right == 2, that is the answer we are looking for.
 
 The second algorithm will traverse the tree and mark down the parent node of each node in the tree. After traversal, we will go from p and build a path from p to root. Then we go from q to root, when we see first time a node appears in both paths, that is the answer we are looking for.
+
+### 241 Different Ways to Add Parentheses
+The solution is inspired by [@2guotou](https://leetcode.com/problems/different-ways-to-add-parentheses/discuss/66328/A-recursive-Java-solution-(284-ms)) in the discussion area. The time complexity is inspired by [@tianyuHHH](https://leetcode.com/problems/different-ways-to-add-parentheses/discuss/66328/A-recursive-Java-solution-(284-ms)/192501) in the comment under this post. The proof is [here](http://people.math.sc.edu/howard/Classes/554b/catalan.pdf)
+This is a very genious way to solve this problem. We should see this problem bottom up:
+
+- if two numbers are in the string, one way to calculate it, f(2) = 1 
+
+- if three numbers are in the string, two way to calculate it, f(3) = 2
+
+- if four numbers are in the string, f(1)\*f(3)+f(2)\*f(2)+f(3)\*f(1) to calculate it
+
+The solution is just a top-down method of calculating it.
+
+
