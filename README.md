@@ -562,4 +562,23 @@ The solution is inspired by [@ChrisZhang12240](https://leetcode.com/problems/per
 
 This theorem states that every natural number can be represented by the sum of four integer squares, therefore the depth of the tree will be at most 4, the width of the tree will be at most sqrt(n), so the total time complexity will be upbounded by O(n^2) in the worst case.
 
+### 300 Longest Increasing Subsquence
+The first approach is dynamic programming, inspired by the solution provided by the question.
+
+- The idea is to use a list longest to record say i-th element in nums, if as the last of the longest possible subsquence, how long the subsquence would be.
+        
+The second approach is dp with binary search. This is inspired by [@bolinq](https://leetcode.com/problems/longest-increasing-subsequence/discuss/152065/Python-explain-the-O(nlogn)-solution-step-by-step) in the discussion area.
+
+- The key idea is to use a list to store the longest possible sequence, but the element in the list is not necessarily correct. Every element, say record_long[i], in the list means the end of longest subsequence of length i+1.
+
+- Every time we meet an element, we look in the record_long list.
+	- If this is larger than the largest, we make the record_long longer.
+
+	- If not, we put it in the right place in the record_long. Sure this will make the record_long not "correct" in the sense of recording the longest increasing subsequence, but this is the smallest possible ending number in all the increasing subquence of length i+1.
+
+- The correctness of this program actually comes mainly from two part.
+
+	- If we can find a largest element, we make the record_long longer.
+
+	- If we find a small element, we can make the whole record smaller by substitute an element, later, we are able to find a smaller i+1 element because i is smaller now.
 
