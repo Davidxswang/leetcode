@@ -549,4 +549,9 @@ We know we need to add a number to the list and we know we need to use 2, 3 and 
 
 The key here is to think of these 3 multiplication as three separate lines, and remember the pointer of the line for each one of them.
 
+### 287 Find the Duplicate Number
+The solution is provided by the [solution of the question](https://leetcode.com/problems/find-the-duplicate-number/solution/).
 
+The solution is to treat the nums list as the linked list and the numbers it stores are the pointers which point to the position of the next element.
+
+The question then becomes: find the start of the cycle of the linked list, which we can apply Floyd's Algorithm to solve.
