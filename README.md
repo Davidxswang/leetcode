@@ -542,4 +542,11 @@ The solution is inspired by [@zhiqing_xiao](https://leetcode.com/problems/single
 
 The key here is to use one bit to separate the nums into two groups and use the xor(n1,n2) to find out the n1 in one group and n2 in the other group.
 
+### Ugly Number II
+This solution is inspired by [@Dico](https://leetcode.com/problems/ugly-number-ii/discuss/69364/My-16ms-C++-DP-solution-with-short-explanation/224033) in the discussion area.
+
+We know we need to add a number to the list and we know we need to use 2, 3 and 5 to multiply one of the number in the list and get a new number which is least among 2\*(), 3\*(), and 5\*().
+
+The key here is to think of these 3 multiplication as three separate lines, and remember the pointer of the line for each one of them.
+
 
