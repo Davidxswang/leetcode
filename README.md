@@ -582,3 +582,7 @@ The second approach is dp with binary search. This is inspired by [@bolinq](http
 
 	- If we find a small element, we can make the whole record smaller by substitute an element, later, we are able to find a smaller i+1 element because i is smaller now.
 
+### 307 Range Sum Query - Mutable
+The solution is provided by the solution of the question. Basically the idea is to build a binary tree to record the sum of every partition. This can make the update and sum process have O(logn) time complexity.
+
+
