@@ -626,7 +626,7 @@ The solution is inspired by [@StefanPochmann](https://leetcode.com/problems/wigg
 
 The key here is actually the process of rewiring the index.
 
-- By using (2\*i+1) % (n | 1), we can rewire the index from 0,1,2,3,4,5 to 1,3,5,0,2,4 and from 0,1,2,3,4 to 1,3,0,2,4
+- By using (2\*i+1) % (n \| 1), we can rewire the index from 0,1,2,3,4,5 to 1,3,5,0,2,4 and from 0,1,2,3,4 to 1,3,0,2,4
 
 Another interesting finding here is that using quick sort to find the k-th largest element is not useful here, because the last test case is about 60000 long, and the structure of the list makes it very hard to use quick sort to shrink the search range by half.
 
