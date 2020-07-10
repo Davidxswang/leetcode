@@ -597,4 +597,17 @@ The idea is very simple and the code is so elegant.
 
 - For each two masks that don't share letters (mask_1 & mask2 == 0), compute the length\*length and find the maximum
 
+### 309 Best Time to Buy and Sell Stock with Cooldown
+This solution is inspired by [@npvinhphat](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/discuss/75928/Share-my-DP-solution-(By-State-Machine-Thinking)) in the discussion area.
+
+The key here is to use three separate storage to track the best possible profit under three states: today rest, today buy, today sell.
+
+- if today I rest, today's best possible profit can come from max(a, b) where a is the rest profit yesterday which means I was resting yesterday, and b is yesterday's sell profit, which means I sold the stock yesterday.
+
+- if today I buy(or accurately, to sell), the best possible profit can come from max(a, b) where a is the rest profit yesterday - today's stock price, since I buy something, today's profit will be lower than yesterday's profit if yesterday I was resting, and b is the yesterday's "to sell" profit, which mean I might have bought the stock yesterday or before yesterday, but I have not sold the stock since then.
+
+- if today I sell, the only possible profit is what profit I had yesterday + today's stock price.
+
+So if we can figure out the state transition conditions, we can manage the question well.
+
 
