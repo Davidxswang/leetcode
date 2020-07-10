@@ -621,4 +621,17 @@ Two things we need to be careful with:
 
 2. actually, in the last cycle, the leaves container can contain: either one single node with no neighbor anymore, or two nodes each having a neighbor of the other node	
 
+### 324 Wiggle Sort II
+The solution is inspired by [@StefanPochmann](https://leetcode.com/problems/wiggle-sort-ii/discuss/77677/O(n)%2BO(1)-after-median-Virtual-Indexing) and [@huoshankou](https://leetcode.com/problems/wiggle-sort-ii/discuss/77682/Step-by-step-explanation-of-index-mapping-in-Java) in the discussion area.
 
+The key here is actually the process of rewiring the index.
+
+- By using (2\*i+1) % (n | 1), we can rewire the index from 0,1,2,3,4,5 to 1,3,5,0,2,4 and from 0,1,2,3,4 to 1,3,0,2,4
+
+Another interesting finding here is that using quick sort to find the k-th largest element is not useful here, because the last test case is about 60000 long, and the structure of the list makes it very hard to use quick sort to shrink the search range by half.
+
+In theory, using quick sort to find the k-th largest element is O(n) time complexity, but that's on average. The last test case is an extreme case, where using quick sort will result nearly O(n^2) time complexity. 
+
+Therefore, to use the built-in sort method of list will be a better choice, which is guaranteed O(nlogn) time complexity since it uses Timsort.
+
+Just giving an intuitive understanding about the time complexity: when n = 60000, n^2 = 3,600,000,000 (about 3.6 billion), nlogn = 60000\*log60000 = 290,000 (about 290k), so the former is about 13k times the latter one. So it's a huge difference.(The last test case will not result in exactly n^2 or nlogn, but this is an intuitive way to see how much difference there is.)
