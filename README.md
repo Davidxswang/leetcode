@@ -586,3 +586,15 @@ The second approach is dp with binary search. This is inspired by [@bolinq](http
 The solution is provided by the solution of the question. Basically the idea is to build a binary tree to record the sum of every partition. This can make the update and sum process have O(logn) time complexity.
 
 
+### 318 Maximum Product of Word Lengths
+The solution is provided by [@agave](https://leetcode.com/problems/maximum-product-of-word-lengths/discuss/76970/Python-solution-beats-99.67) in the discussion area.
+
+The idea is very simple and the code is so elegant.
+
+- For each word, compute a mask according to the appearance of each letter from 'a' to 'z'
+
+- For words sharing the same mask, record only the longest length
+
+- For each two masks that don't share letters (mask_1 & mask2 == 0), compute the length\*length and find the maximum
+
+
