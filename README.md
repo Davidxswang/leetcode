@@ -610,4 +610,15 @@ The key here is to use three separate storage to track the best possible profit 
 
 So if we can figure out the state transition conditions, we can manage the question well.
 
+### 310 Minimum Height Trees
+This is inspired by [@dietpepsi](https://leetcode.com/problems/minimum-height-trees/discuss/76055/Share-some-thoughts) in the discussion area.
+
+The key idea is to remove all the leaves in every cycle, until we have 2 or 1 node left. The remaining nodes are the result to return.
+
+Two things we need to be careful with:
+
+1. we need to use a new container to record the leaves after current cycle
+
+2. actually, in the last cycle, the leaves container can contain: either one single node with no neighbor anymore, or two nodes each having a neighbor of the other node	
+
 
