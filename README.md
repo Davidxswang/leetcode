@@ -635,3 +635,29 @@ In theory, using quick sort to find the k-th largest element is O(n) time comple
 Therefore, to use the built-in sort method of list will be a better choice, which is guaranteed O(nlogn) time complexity since it uses Timsort.
 
 Just giving an intuitive understanding about the time complexity: when n = 60000, n^2 = 3,600,000,000 (about 3.6 billion), nlogn = 60000\*log60000 = 290,000 (about 290k), so the former is about 13k times the latter one. So it's a huge difference.(The last test case will not result in exactly n^2 or nlogn, but this is an intuitive way to see how much difference there is.)
+
+### 332 Reconstruct Itinerary
+
+The solution is provided by [@StefanPochmann](https://leetcode.com/problems/reconstruct-itinerary/discuss/78768/Short-Ruby-Python-Java-C%2B%2B). The basic idea is backtracking but the code is so beautiful.
+
+1. Visit one of the destination airports starting from start airport.
+2. If the destination doesn't have any outgoing edge, the destination should go into the route.
+3. If all the edges of a start point have been visited, the start point can go into the route.
+4. Reverse the route, is the answer.
+
+### 334 Increasing Triplet Subsequence
+
+The solution is provided by [@girikuncoro](https://leetcode.com/problems/increasing-triplet-subsequence/discuss/78995/Python-Easy-O(n)-Solution). The solution is very concise and genious.
+
+1. smallest_first is the smallest value till the current visiting number.
+2. smallest_second is the smallest value2 in all the (value1, value2) pairs where value1 < value2.
+3. if there is any value larger then value2, then such sequence exists.
+
+### 337 House Robber III
+
+Still, finding the repeating structure of the problem and subproblem is the basis. Dynamic programming can save the time of calculating optimal value for each node. The greedy bottom-up solution makes use of the information that should have been lost in the dynamic programming regime.
+
+For each node, calculate two values: best value when robbing this node, or best value when not robbing this node.
+This two values can be calculated by: root.value + notrobleftnode_value + notrobrightnode_value, and max(robleftnode_value, notrobleftnode_value) + max(robrightnode_value, notrobrightnode_value)
+
+Be careful with the best value of not robbing the current node, which should be calculated by max()+max(), because maybe not robbing the left node or right node could be better choice for left subtree or right subtree. But apparently, if both left and right nodes are not robbed, the root node should be robbed. But this will be included in the current solution because max(notrobroot_value, robroot_value) will get us there.
