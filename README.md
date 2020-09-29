@@ -661,3 +661,47 @@ For each node, calculate two values: best value when robbing this node, or best 
 This two values can be calculated by: root.value + notrobleftnode_value + notrobrightnode_value, and max(robleftnode_value, notrobleftnode_value) + max(robrightnode_value, notrobrightnode_value)
 
 Be careful with the best value of not robbing the current node, which should be calculated by max()+max(), because maybe not robbing the left node or right node could be better choice for left subtree or right subtree. But apparently, if both left and right nodes are not robbed, the root node should be robbed. But this will be included in the current solution because max(notrobroot_value, robroot_value) will get us there.
+
+### 365 Water and Jug Problem
+
+The idea is from [The Die Hard 3 Problem ...](https://www.math.tamu.edu/~dallen/hollywood/diehard/diehard.htm).
+
+There are two bottles, one is X liter, other other is Y liter, and we want to know whether we can measure Z liter of water.
+
+It depends on whether the greatest common denominator of X and Y can divide Z. It's based on the number theory. If p and q are relatively prime numbers and there will be m and n such that mp + nq = k. If m or n is negative, this means we are emptying p or q liters respectively. If m and n are positive, this means we are filling p and q liters respectively.
+
+So back to the problem, we cannot guarantee that the X and Y are relatively prime, but we can calculate the greates common denominator, if this denominator can divide Z then, X and Y are relatively prime after dividing it, which is equivalent to p and q are relatively prime in the equation mp + nq = k.
+
+### 368 Largest Divisible Subset
+
+The solution is provided by [@amit_gupta10](https://leetcode.com/problems/largest-divisible-subset/discuss/684677/3-STEPS-c%2B%2B-or-python-or-java-dp-PEN-PAPER-DIAGRAM-explanation-simple-and-clear) in the discussion area.
+
+1. first, we need to sort the list, so that we can go from the smallest to the largest.
+2. second, we use an array to make a link list, each element in the array will remember if this number is the end of a divisible subset, how long is this list, and which element is the previous element. The first element will record (1, its index). At the meanwhile, we tract the length of the longest subset and last index
+3. At last, we will go back from the index to the beginning of the list.
+
+### 372 Super Pow
+
+The solution is inspired by [@fentoyal](https://leetcode.com/problems/super-pow/discuss/84472/C%2B%2B-Clean-and-Short-Solution) in the discussion area.
+
+The solution utilizes an equation:
+
+(a * b) % k = (a % k) * (b % k) % k
+
+The proof is as follows: (inspired by @[ShayWang](https://leetcode.com/problems/super-pow/discuss/84472/C++-Clean-and-Short-Solution/229608))
+
+suppose:
+    a = Ak + B
+    b = Ck + D
+so:
+    a * b = (Ak + B) * (Ck + D) = (ACk + BC + AD) * k + BD
+    (a * b) % k = BD
+    a % k = B
+    b % k = D
+    (a % k) * (b % k) % k = BD = (a * b) % k
+
+So we can separate the problem: (a\*\*b) % k, where a is a number, b is a list, k = 1337. 
+
+(a\*\*b) % k = ((a ** b[:-1])^10 % k) * (a ** b[-1] % k) % k
+
+And since a % k % k % k % k = a % k, to avoid overflow, we can add %k to all the places where the result migh overflow.
