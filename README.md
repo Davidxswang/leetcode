@@ -705,3 +705,31 @@ So we can separate the problem: (a\*\*b) % k, where a is a number, b is a list, 
 (a\*\*b) % k = ((a ** b[:-1])^10 % k) * (a ** b[-1] % k) % k
 
 And since a % k % k % k % k = a % k, to avoid overflow, we can add %k to all the places where the result migh overflow.
+
+### 375 Guess Number Higher or Lower II
+
+The solution is inspired by [@10000tb](https://leetcode.com/problems/guess-number-higher-or-lower-ii/discuss/84762/Improve-the-Question-and-Example/89343).
+
+The the best solution for cost(start=1, end=n) is `min(k + max(cost(start=1, end=k-1), cost(start=k+1, end=n)))`, which means we need to pay for the guess of k, then add to it the cost of left part (when we get the signal smaller) or the cost of right part (when we get the signal larger), whichever is larger, because we need to make sure no matter what number they think of, we can win, using the money.
+
+### 373 Find K Pairs with Smallest Sums
+
+The solution is inspired by [@StefanPochmann](https://leetcode.com/problems/find-k-pairs-with-smallest-sums/discuss/84550/Slow-1-liner-to-Fast-solutions).
+
+We can think of the frontier between in-result and out-of-result elements in the priority queue or heap, each time we put a pair in the result, we can add the element to its right to the priority queue, and if the first element on one line gets selected into the result, we need to add its bottom neighbor to the priority queue as well. To make everything clear, we need to think of the elements in an array:
+
+```Python
+       2    4    6
+ 1   [1,2] [1,4] [1,6]
+ 3   [3,2] [3,4] [3,6]
+ 5   [5,2] [5,4] [5,6]
+```
+
+### 316 Remove Duplicate Letters
+
+The solution is inspired by [@lixx2100](https://leetcode.com/problems/remove-duplicate-letters/).
+
+The idea is to deal with the unique letters in current string s one-by-one. 
+
+- If we find a letter that after its first appearance, all the unique letters appear, we append the result by this letter and delete this letter from the rest of the string to its right, and its right part becomes the current string.
+- If after its first appearance, not all the unique letters appear, we cannot do anything, because in this case, there is some letter(s) whose appearance is totally on the left of this letter's appearance. For example, `'ddabc'`, `'dd'` is totally on `'abc'`'s left, so we have to deal with dd first.
