@@ -733,3 +733,7 @@ The idea is to deal with the unique letters in current string s one-by-one.
 
 - If we find a letter that after its first appearance, all the unique letters appear, we append the result by this letter and delete this letter from the rest of the string to its right, and its right part becomes the current string.
 - If after its first appearance, not all the unique letters appear, we cannot do anything, because in this case, there is some letter(s) whose appearance is totally on the left of this letter's appearance. For example, `'ddabc'`, `'dd'` is totally on `'abc'`'s left, so we have to deal with dd first.
+
+### 382 Linked List Random Node
+
+Reservior Sampling: for every element at index i, generate an element from (0, 1) if it's smaller than 1/i, choose the element at index i. Every element should have the same probability to be chosen, e.g., the last element to be chosen: 1/n, the second to the last element to be chosen: 1/(n-1) * (n-1)/n = 1/n, ... The key here is that even if an element might be chosen in the current step, it is still possible for the element to be replaced by the following elements.
